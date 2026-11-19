@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 1.6 BLOG — Главная</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-inner">
+            <!-- Логотип -->
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⌖</span> CS 1.6 <span class="logo-accent">BLOG</span>
+            </a>
+
+            <!-- Главное меню с выпадающим списком -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#">Рубрики ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="article.html">Карты (de_dust2)</a></li>
+                            <li><a href="article.html">Оружие и стрельба</a></li>
+                            <li><a href="article.html">Консольные команды</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">Об авторе</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Приветственный баннер -->
+    <section class="hero">
+        <div class="container">
+            <h1>Легенда киберспорта: Counter-Strike 1.6</h1>
+            <p>Тактики на классических картах, секреты стрельбы из AK-47 и лучшие настройки конфига.</p>
+            <a href="#articles" class="btn">Перейти к статьям</a>
+        </div>
+    </section>
+
+    <!-- Основной контент: карточки статей -->
+    <main id="articles" class="container main-content">
+        <h2>Свежие публикации</h2>
+        
+        <div class="posts-grid">
+            <!-- Статья 1 -->
+            <article class="post-card">
+                <!-- Замените ссылку на свою картинку, например: img/dust2.jpg -->
+                <img src="https://placeholder.com" alt="Карта de_dust2">
+                <div class="post-body">
+                    <span class="category">Карты</span>
+                    <h3>Секреты и раскидки на de_dust2</h3>
+                    <p>Разбираем лучшие позиции для защиты точки B и правильные дымовые гранаты для выхода на длину.</p>
+                    <a href="article.html" class="btn-outline">Читать статью →</a>
+                </div>
+            </article>
+
+            <!-- Статья 2 -->
+            <article class="post-card">
+                <img src="https://placeholder.com" alt="Оружие в CS 1.6">
+                <div class="post-body">
+                    <span class="category">Оружие</span>
+                    <h3>Как контролировать отдачу AK-47 и M4A1</h3>
+                    <p>Учимся стрелять по 2–3 патрона в голову на дальней дистанции и контролировать зажим вблизи.</p>
+                    <a href="article.html" class="btn-outline">Читать статью →</a>
+                </div>
+            </article>
+
+            <!-- Статья 3 -->
+            <article class="post-card">
+                <img src="https://placeholder.com" alt="Консоль CS 1.6">
+                <div class="post-body">
+                    <span class="category">Гайды</span>
+                    <h3>Топ-10 консольных команд для комфортной игры</h3>
+                    <p>Настраиваем маленький прицел, убираем тряску оружия и выставляем идеальный рейт (rate 25000).</p>
+                    <a href="article.html" class="btn-outline">Читать статью →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-info">
+                <div class="logo">⌖ CS 1.6 <span class="logo-accent">BLOG</span></div>
+                <p>Финальный проект по курсу «Веб-дизайн – Junior»</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="article.html">Статьи</a>
+                <a href="about.html">Об авторе</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

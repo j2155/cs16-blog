@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #161915; /* Темный оливково-графитовый фон */
+    color: #e4e7e4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Шапка и логотип */
+.header {
+    background-color: #1f241e;
+    border-bottom: 2px solid #e89b25; /* Фирменная оранжевая полоса CS */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    background-color: #e89b25;
+    color: #161915;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+}
+
+.logo-accent {
+    color: #e89b25;
+}
+
+/* Главное меню и выпадающий список */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #cbd5c0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover, .menu a.active {
+    color: #e89b25;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f241e;
+    border: 1px solid #353d33;
+    list-style: none;
+    min-width: 210px;
+    border-radius: 6px;
+    padding: 8px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #2c332a;
+    color: #e89b25;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Приветственный баннер */
+.hero {
+    background: linear-gradient(rgba(22, 25, 21, 0.8), rgba(22, 25, 21, 0.9)), 
+                radial-gradient(circle at top, #3b4437, #161915);
+    border-bottom: 1px solid #2c332a;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #b8c2b5;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    background-color: #e89b25;
+    color: #161915;
+    padding: 13px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #ffa928;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    margin-top: 15px;
+    color: #e89b25;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-outline:hover {
+    text-decoration: underline;
+}
+
+/* Основной контент и карточки */
+.main-content {
+    padding: 50px 20px;
+    flex: 1;
+}
+
+.main-content h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #ffffff;
+    border-left: 4px solid #e89b25;
+    padding-left: 12px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.post-card {
+    background-color: #1f241e;
+    border: 1px solid #2e362c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    border-color: #e89b25;
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-body {
+    padding: 22px;
+}
+
+.category {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #e89b25;
+    letter-spacing: 1px;
+}
+
+.post-body h3 {
+    margin: 8px 0 12px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.post-body p {
+    color: #b8c2b5;
+    font-size: 15px;
+}
+
+/* Страница статьи и видео */
+.full-article {
+    background-color: #1f241e;
+    border: 1px solid #2e362c;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.full-article h1 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 10px 0 25px;
+}
+
+.full-article h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.full-article p {
+    margin-bottom: 15px;
+    color: #d1d8cf;
+}
+
+.article-cover {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.article-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #d1d8cf;
+}
+
+.article-list li {
+    margin-bottom: 8px;
+}
+
+code {
+    background-color: #161915;
+    color: #e89b25;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #353d33;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Подвал */
+.footer {
+    background-color: #111410;
+    border-top: 1px solid #2c332a;
+    color: #9ba698;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #cbd5c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #e89b25;
+}
